@@ -28,5 +28,5 @@ Users can create, edit, delete, and manage notes with a clean and responsive UI.
 #Front-end setup
 -cd frontend
 -npm install
--npm run dev
+-npm run serve
 
