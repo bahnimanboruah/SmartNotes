@@ -24,7 +24,7 @@ required:true
 },
 methods: {
 getArticleData() {
-fetch('http://localhost:5000/get/${this.id}/', {
+fetch('http://localhost:5000/get//${this.id}/', {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

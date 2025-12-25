@@ -45,7 +45,7 @@ if(!this.title || !this.body){
 this.error = "Please add all fields"
 }
 else {
-fetch("http://localhost:5000/add", {
+fetch("http://localhost:5000//add", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

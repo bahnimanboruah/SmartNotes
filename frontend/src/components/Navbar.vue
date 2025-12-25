@@ -25,7 +25,7 @@
         <ul class="navbar-nav ms-auto">
 
           <li class="nav-item mx-2">
-            <router-link class="btn btn-primary" to="/login">
+            <router-link class="btn btn-primary" to="/Home">
               Home
             </router-link>
           </li>

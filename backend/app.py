@@ -46,6 +46,11 @@ def get_articles():
     articles = Articles.query.all()
     return jsonify(articles_schema.dump(articles))
 
+@app.route('/get/<int:id>', methods=['GET'])
+def post_details(id):
+    article = Articles.query.get(id)
+    return article_schema.jsonify(article)
+
 
 @app.route('/add', methods=['POST'])
 def add_article():
@@ -64,6 +69,19 @@ def add_article():
     db.session.commit()
 
     return article_schema.jsonify(article), 201
+
+@app.route('/update/<int:id>', methods=['PUT'])
+def update_article(id):
+    article = Articles.query.get(id)
+    
+    title = request.json['title']
+    body = request.json['body']
+
+    article.title = title
+    article.body = body
+
+    db.session.commit()
+    return article_schema.jsonify(article)
 
 
 @app.route('/delete/<int:id>', methods=['DELETE'])
